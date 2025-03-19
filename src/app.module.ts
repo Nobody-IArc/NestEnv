@@ -4,7 +4,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 
 @Module({
-  imports: [ConfigModule.forRoot({})],
+  imports: [ConfigModule.forRoot({ isGlobal: true })], // 모듈 전역 사용 설정
   controllers: [AppController],
   providers: [AppService],
 })
