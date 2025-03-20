@@ -9,4 +9,9 @@ export class AppController {
   getHello(): string {
     return this.configService.get('MESSAGE') ?? 'No Message';
   }
+
+  @Get('service-url')
+  getServiceUrl(): string {
+    return this.configService.get('SERVICE_URL') ?? '/';
+  }
 }
