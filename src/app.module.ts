@@ -13,6 +13,8 @@ console.log('env: ' + process.env.NODE_ENV);
       isGlobal: true, // 전역 사용
       envFilePath: `${process.cwd()}/envs/${process.env.NODE_ENV}.env`, // 환경 경로
       load: [config], // Custom 파일 설정
+      cache: true, // Cache 옵션 추가로 메모리 낭비 줄임
+      expandVariables: true, // 확장 변수 옵션 추가
     }),
     WeatherModule,
   ], // 모듈 전역 사용 설정

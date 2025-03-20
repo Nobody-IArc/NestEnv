@@ -15,6 +15,12 @@ export class AppController {
     return this.configService.get('SERVICE_URL') ?? '/';
   }
 
+  // 확장 변수 사용
+  @Get('server-url')
+  getServerUrl(): string {
+    return this.configService.get('SERVER_URL') ?? '/';
+  }
+
   @Get('db-info')
   getTest(): string {
     console.log(this.configService.get('logLevel'));
